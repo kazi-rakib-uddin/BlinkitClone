@@ -17,8 +17,11 @@
     <style name="NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/white</item>
+        <!-- change status nar icon color-->
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
 </resources>
