@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MobileNumberFragment">
+
+   <ImageView
+       android:id="@+id/img"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_270sdp"
+       android:src="@drawable/marquee_img"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:scaleType="fitXY"/>
+
+   <ImageView
+       android:id="@+id/imageView"
+       android:layout_width="@dimen/_60sdp"
+       android:layout_height="@dimen/_60sdp"
+       android:src="@drawable/logo"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/img" />
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="India's last minute app"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/imageView"
+       android:fontFamily="@font/robotomono_bold"
+       android:textColor="@color/black"
+       android:textSize="20sp"
+       android:layout_marginTop="@dimen/_10sdp"/>
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/_10sdp"
+       android:fontFamily="@font/robotomono_medium"
+       android:text="Log in or sign up"
+       android:textColor="@color/black"
+       android:textSize="15sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/name_text_input"
+       style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView2"
+       tools:ignore="MissingConstraints"
+       android:layout_marginHorizontal="@dimen/_20sdp"
+       android:layout_marginTop="@dimen/_15sdp"
+       app:prefixText="+91"
+       app:boxStrokeColor="@color/box_stoke_color"
+       app:hintTextColor="@color/box_stoke_color">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/name_edit_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter mobile number"
+          android:textCursorDrawable="@null"
+          android:inputType="number"
+          android:fontFamily="@font/robotomono_regular"/>
+   </com.google.android.material.textfield.TextInputLayout>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btn_continue"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="@dimen/_20sdp"
+       android:layout_marginTop="@dimen/_20sdp"
+       android:background="@drawable/continue_button_bg"
+       android:fontFamily="@font/robotomono_regular"
+       android:text="Continue"
+       android:textAllCaps="false"
+       android:textColor="@color/white"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/name_text_input" />
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:gravity="center"
+       android:background="#F0F5F8"
+       android:padding="@dimen/_3sdp">
+
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="By continuing to our Terms of service &amp; Privacy policy"
+         android:textColor="@color/black"
+          android:fontFamily="@font/robotomono_regular"
+          android:textSize="10sp"
+          />
+
+
+   </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
