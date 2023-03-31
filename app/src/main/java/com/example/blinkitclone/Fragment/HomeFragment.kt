@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.blinkitclone.Adapter.*
+import com.example.blinkitclone.MainActivity
 import com.example.blinkitclone.Model.MultipleBannerModel
 import com.example.blinkitclone.R
 import com.example.blinkitclone.databinding.FragmentHomeBinding
@@ -37,6 +38,9 @@ class HomeFragment : Fragment() {
     ): View? {
 
         _binding = FragmentHomeBinding.inflate(inflater,container,false)
+
+        (requireActivity() as MainActivity).binding.toolbar.visibility = View.GONE
+        (requireActivity() as MainActivity).binding.shadowView.visibility = View.GONE
 
         return binding.root
     }

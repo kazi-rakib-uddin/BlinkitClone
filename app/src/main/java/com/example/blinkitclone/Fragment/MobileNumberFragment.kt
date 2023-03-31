@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import androidx.navigation.fragment.findNavController
+import com.example.blinkitclone.MainActivity
 import com.example.blinkitclone.R
 import com.example.blinkitclone.databinding.FragmentMobileNumberBinding
 
@@ -15,7 +16,7 @@ class MobileNumberFragment : Fragment() {
 
     private var _binding : FragmentMobileNumberBinding? = null
     private val binding  get() = _binding!!
-
+    //val yourActivity = activity as MainActivity
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,6 +24,8 @@ class MobileNumberFragment : Fragment() {
 
         _binding = FragmentMobileNumberBinding.inflate(inflater,container,false)
 
+        (requireActivity() as MainActivity).binding.toolbar.visibility = View.GONE
+        (requireActivity() as MainActivity).binding.shadowView.visibility = View.GONE
         return binding.root
 
     }
