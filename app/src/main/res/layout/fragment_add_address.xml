@@ -1,8 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.AddAddressFragment" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    class ="com.example.blinkitclone.Fragment.AddAddressFragment"
+    >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Fragment.AddAddressFragment" />
+
+    <LinearLayout
+        android:id="@+id/lin_location_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/location_search_box_bg"
+        android:padding="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_10sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start typing to search..."
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:fontFamily="@font/robotomono_regular"
+            android:textColor="@color/gray"
+            android:layout_gravity="center"
+            android:textSize="14sp"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lin_location_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/location_address_box_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EN Block"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/robotomono_medium"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/txt_full_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="700091, DN Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091"
+                android:lines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="12sp"
+                android:fontFamily="@font/robotomono_regular"
+                android:textColor="@color/black"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_complete_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/confirm_location_button_bg"
+                android:fontFamily="@font/robotomono_regular"
+                android:text="Enter Complete Location"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_text_input"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/lin_location_address"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:backgroundTint="@color/green"
+        android:src="@drawable/gps"
+        app:tint="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/img_center_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/custom_markar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_40sdp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_subCategoryFragment"
+            app:destination="@id/subCategoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -31,6 +34,9 @@
         <action
             android:id="@+id/action_profileFragment_to_addressFragment"
             app:destination="@id/addressFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
     </fragment>
     <fragment
         android:id="@+id/addressFragment"
@@ -46,4 +52,14 @@
         android:name="com.example.blinkitclone.Fragment.AddAddressFragment"
         android:label="fragment_add_address"
         tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.blinkitclone.Fragment.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/subCategoryFragment"
+        android:name="com.example.blinkitclone.Fragment.SubCategoryFragment"
+        android:label="fragment_sub_category"
+        tools:layout="@layout/fragment_sub_category" />
 </navigation>

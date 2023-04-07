@@ -7,30 +7,30 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
+import com.example.blinkitclone.Adapter.FavouriteAdapter
 import com.example.blinkitclone.MainActivity
 import com.example.blinkitclone.R
-import com.example.blinkitclone.databinding.FragmentProfileBinding
+import com.example.blinkitclone.databinding.FragmentFavouriteBinding
 
-class ProfileFragment : Fragment() {
 
-    private var _binding: FragmentProfileBinding? = null
+class FavouriteFragment : Fragment() {
+
+    private var _binding : FragmentFavouriteBinding? = null
     private val binding get() = _binding!!
+    private lateinit var customFavouriteAdapter: FavouriteAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
-        /*binding.toolbar.title = "Profile"
-        binding.toolbar.navigationIcon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_arrow_back_24)*/
+        _binding = FragmentFavouriteBinding.inflate(layoutInflater,container,false)
         (requireActivity() as MainActivity).binding.toolbar.visibility = View.VISIBLE
         (requireActivity() as MainActivity).binding.shadowView.visibility = View.VISIBLE
 
-        (requireActivity() as MainActivity).binding.toolbar.title = "Profile"
+        (requireActivity() as MainActivity).binding.toolbar.title = "Your favourite items"
         (requireActivity() as MainActivity).binding.toolbar.navigationIcon =
             ContextCompat.getDrawable(requireContext(), R.drawable.ic_arrow_back_24)
-
         return binding.root
     }
 
@@ -38,21 +38,13 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnAddress.setOnClickListener {
-
-            findNavController().navigate(R.id.action_profileFragment_to_addressFragment)
-        }
-
-        binding.btnFavourite.setOnClickListener {
-
-            findNavController().navigate(R.id.action_profileFragment_to_favouriteFragment)
-        }
+        customFavouriteAdapter = FavouriteAdapter()
+        binding.rvFavourite.adapter = customFavouriteAdapter
 
         (requireActivity() as MainActivity).binding.toolbar.setNavigationOnClickListener {
 
             findNavController().popBackStack()
         }
-
     }
 
 }

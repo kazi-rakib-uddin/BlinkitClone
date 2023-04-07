@@ -63,4 +63,9 @@ dependencies {
 
     //Permission
     //implementation 'com.karumi:dexter:6.2.3'
+
+    //MagicIndicator
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+
 }
