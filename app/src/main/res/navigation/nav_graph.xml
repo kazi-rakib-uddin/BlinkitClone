@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_homeFragment_to_subCategoryFragment"
             app:destination="@id/subCategoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_singleStoreFragment"
+            app:destination="@id/singleStoreFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -37,6 +43,9 @@
         <action
             android:id="@+id/action_profileFragment_to_favouriteFragment"
             app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_managePaymentFragment"
+            app:destination="@id/managePaymentFragment" />
     </fragment>
     <fragment
         android:id="@+id/addressFragment"
@@ -62,4 +71,19 @@
         android:name="com.example.blinkitclone.Fragment.SubCategoryFragment"
         android:label="fragment_sub_category"
         tools:layout="@layout/fragment_sub_category" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.example.blinkitclone.Fragment.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/managePaymentFragment"
+        android:name="com.example.blinkitclone.Fragment.ManagePaymentFragment"
+        android:label="fragment_manage_payment"
+        tools:layout="@layout/fragment_manage_payment" />
+    <fragment
+        android:id="@+id/singleStoreFragment"
+        android:name="com.example.blinkitclone.Fragment.SingleStoreFragment"
+        android:label="fragment_single_store"
+        tools:layout="@layout/fragment_single_store" />
 </navigation>

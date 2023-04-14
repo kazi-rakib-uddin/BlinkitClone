@@ -41,6 +41,7 @@ class HomeFragment : Fragment() {
 
         (requireActivity() as MainActivity).binding.toolbar.visibility = View.GONE
         (requireActivity() as MainActivity).binding.shadowView.visibility = View.GONE
+        (requireActivity() as MainActivity).binding.viewCart.visibility = View.VISIBLE
 
         return binding.root
     }
@@ -72,6 +73,18 @@ class HomeFragment : Fragment() {
         binding.btnProfile.setOnClickListener {
 
             findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+        }
+
+
+        binding.btnShop.setOnClickListener {
+
+            findNavController().navigate(R.id.action_homeFragment_to_singleStoreFragment)
+        }
+
+
+        (requireActivity() as MainActivity).binding.viewCart.setOnClickListener {
+
+            findNavController().navigate(R.id.action_homeFragment_to_checkoutFragment)
         }
 
     }

@@ -273,6 +273,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <LinearLayout
+                        android:id="@+id/btn_shop"
                         android:layout_width="@dimen/_60sdp"
                         android:layout_height="@dimen/_50sdp"
                         android:layout_gravity="center"

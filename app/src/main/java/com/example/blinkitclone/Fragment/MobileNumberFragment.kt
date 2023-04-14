@@ -26,6 +26,8 @@ class MobileNumberFragment : Fragment() {
 
         (requireActivity() as MainActivity).binding.toolbar.visibility = View.GONE
         (requireActivity() as MainActivity).binding.shadowView.visibility = View.GONE
+        (requireActivity() as MainActivity).binding.viewCart.visibility = View.GONE
+
         return binding.root
 
     }

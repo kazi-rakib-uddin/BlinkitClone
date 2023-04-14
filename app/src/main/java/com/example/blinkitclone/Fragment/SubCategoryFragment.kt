@@ -5,6 +5,7 @@ import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -147,9 +148,57 @@ class SubCategoryFragment : Fragment() {
         val dialog = BottomSheetDialog(requireContext(), R.style.TransparentBottomSheetDialogTheme)
         _binding_bsd = CustomSingleProductDialogBinding.inflate(LayoutInflater.from(requireContext()))
 
+        //binding_bsd.textView.text = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
+        //makeTextViewResizable(binding_bsd.textView, 3, "view more details", true, binding_bsd.textView.text.toString());
         binding_bsd.pagerSlider.adapter =singleProductSliderAdapter
         binding_bsd.rvSimilarProduct.adapter =bestsellersAdapter
         binding_bsd.rvLike.adapter =bestsellersAdapter
+
+        binding_bsd.btnViewMore.setOnClickListener {
+
+            /*binding_bsd.linMoreDetails.visibility = View.VISIBLE
+
+            val params: LinearLayout.LayoutParams =
+                LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+
+            val params1: LinearLayout.LayoutParams =
+                LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+
+            binding_bsd.btnViewLess.visibility = View.VISIBLE
+
+            params.setMargins(0, 0, 0, 0)
+            params1.setMargins(10, 5, 0, 150)
+
+            binding_bsd.btnViewMore.layoutParams = params
+            //binding_bsd.linMoreDetails.layoutParams = params1
+            binding_bsd.btnViewLess.layoutParams = params1
+
+            binding_bsd.btnViewMore.visibility = View.GONE
+            binding_bsd.btnViewLess.visibility = View.VISIBLE*/
+
+
+        }
+
+        binding_bsd.btnViewLess.setOnClickListener {
+
+            binding_bsd.linMoreDetails.visibility = View.GONE
+            binding_bsd.btnViewMore.visibility = View.VISIBLE
+            binding_bsd.btnViewLess.visibility = View.GONE
+
+            val params: LinearLayout.LayoutParams =
+                LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+
+
+            params.setMargins(10, 5, 0, 50)
+
+            binding_bsd.btnViewMore.layoutParams = params
+
+
+        }
+
+
+
+
 
         binding_bsd.btnClose.setOnClickListener {
 

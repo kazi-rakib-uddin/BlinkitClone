@@ -31,6 +31,8 @@ class ProfileFragment : Fragment() {
         (requireActivity() as MainActivity).binding.toolbar.navigationIcon =
             ContextCompat.getDrawable(requireContext(), R.drawable.ic_arrow_back_24)
 
+        (requireActivity() as MainActivity).binding.viewCart.visibility = View.GONE
+
         return binding.root
     }
 
@@ -47,6 +49,12 @@ class ProfileFragment : Fragment() {
 
             findNavController().navigate(R.id.action_profileFragment_to_favouriteFragment)
         }
+
+        binding.btnPayment.setOnClickListener {
+
+            findNavController().navigate(R.id.action_profileFragment_to_managePaymentFragment)
+        }
+
 
         (requireActivity() as MainActivity).binding.toolbar.setNavigationOnClickListener {
 

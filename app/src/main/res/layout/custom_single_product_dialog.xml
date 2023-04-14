@@ -38,7 +38,8 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fillViewport="true">
+            android:fillViewport="true"
+            android:layout_marginBottom="@dimen/_50sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -254,7 +255,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/robotomono_medium"
-                android:text="Similar Products"
+                android:text="Product Details"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -271,9 +272,258 @@
                 android:textSize="12sp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_8sdp"
-                android:layout_marginBottom="@dimen/_90sdp"
                 />
 
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is Expandable text this is a simple text, this is a testing text"
+                android:textSize="10sp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/robotomono_regular"
+                />
+
+            <LinearLayout
+                android:id="@+id/btn_view_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="View more details"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/robotomono_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/arrow_down"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    app:tint="@color/green"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lin_more_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Manufacturer Details"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/manufacture_details"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="FSSAI License"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="10012022000261"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Country Of Origin"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="India"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Customer Care Details"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="Customer Care Number: 1-800-208-8888"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Expiry Date"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="Please refer to the packaging of the product for expiry date."
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Seller"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="Bigway Marketing Private Limited"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Ingredients"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/ingredients"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="Disclaimer"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:text="@string/disclaimer"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btn_view_less"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="View less details"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/robotomono_regular"
+                    />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:src="@drawable/arrow_up"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    app:tint="@color/green"
+                    />
+
+
+            </LinearLayout>
 
 
 
@@ -281,6 +531,69 @@
 
 
         </androidx.core.widget.NestedScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/_8sdp">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_regular"
+                    android:text="750 ml"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomono_medium"
+                    android:text="₹150"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/confirm_location_button_bg"
+                android:fontFamily="@font/robotomono_regular"
+                android:text="Add to cart"
+                android:textColor="@color/white"
+                android:padding="@dimen/_8sdp"
+                android:textSize="10sp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"/>
+
+
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
